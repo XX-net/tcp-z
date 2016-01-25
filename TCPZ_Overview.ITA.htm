@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<title>Guida di TCP-Z</title>
+<meta http-equiv="Content-Type" content=
+"text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+p {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+.bottommenu {  font-family: Arial, Helvetica, sans-serif; font-size: 8pt;
+font-style: normal; text-decoration: none}
+h3 {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt;
+font-style: normal; font-weight: bold}
+h1 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 18pt;
+font-weight: bold; margin-top: 16px}
+li {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+h2 {  font-family: Arial, Helvetica, sans-serif; font-size: 14pt;
+font-weight: bold}
+ol {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+blockquote {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+pre {  font-family: "Courier New", Courier, mono; font-size: 9pt}
+ul {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+.almost_half_cell{max-width:400;width:49%}-->
+</style>
+</head>
+<body bgcolor="#FFFFFF">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="379">
+
+<tr>
+<td width="23%" height="52">&nbsp;</td>
+<td align="right" valign="bottom" width="77%" height="52"><b>
+<font face="Verdana, Arial, Helvetica, sans-serif"
+size="5">Guida</font></b></td>
+</tr>
+
+<tr>
+
+<td colspan="2" valign="top" height="2" bgcolor="#99CC00"></td>
+</tr>
+
+
+<tr>
+
+<td colspan="2" valign="top" align="left">
+<h1 >TCP-Z&nbsp; V2.6</h1>
+
+<h2>Scheda "TCP"</h2>
+<table border="0" width="100%" id="table1">
+	<tr>
+		<td><img border="0" src="images/tcp-z_tcp.gif" width="390"
+height="457"></td>
+		<td width="7" align="left" valign="top">&nbsp;</td>
+		<td width="575" align="left" valign="top"><p>1) Versione del file.</p>
+		<p>2) Limite delle connessioni parziali TCP/IP, letto dal file tcpip.sys
+presente sull'hard disk.</p>
+		<p>3) Limite delle connessioni parziali TCP/IP, letto dalla memoria del
+kernel.</p>
+		<p>4) Indica se il file tcpip.sys &egrave o no allo stato originale. <br>
+		&quot;S&igrave&quot;: indica che il file non &egrave stato modificato.</p>
+		<p>5) Conteggio degli eventi di sistema, il cui ID &egrave uguale a
+4226.</p>
+		<p>6) Registrazione dei picchi. Clicca con il tasto sinistro del mouse
+sull'icona per vedere i valori pi&ugrave alti degli eventi.</p>
+		<p>7) Cambia l'allineamento del contatore in tempo reale.</p>
+		<p>8) Numero delle connessioni stabilite.</p>
+		<p>9) Numero delle connessioni parziali. <br>
+		Una connessione parziale &egrave una connessione in uscita TCP incompleta,
+nello stato SYN-SENT.</p>
+		<p>10) Creazione depth. Questo valore viene letto dalla memoria del kernel
+dal file tcpip.sys.<br>
+		Windows, infatti, controlla questo valore in modo che non oltrepassi mai
+il limite della memoria (3).<br><p>
+		<p>11) Numero delle connessioni in entrata TCP, nello stato SYN-RCVD.<br>
+		Se c'&egrave una porta in ascolto che &egrave stata aperta da un
+programma, e un client remoto tenta di connettersi a questa porta,
+risulter&agrave in questo grafico.</p></td>
+	</tr>
+</table>
+
+<p>12) Numero dei picchi in tempo reale. xx/yy, xx &egrave il valore del
+tempo reale, yy &egrave il valore del picco pi&ugrave alto.<br>
+Il grafico della connessione e il grafico della velocit&agrave hanno lo
+stesso formato.</p>
+<p>13) Velocit&agrave di download, in kilobyte al secondo.</p>
+<p>14) Velocit&agrave di upload, in kilobyte al secondo.</p>
+<p>15) Tempo trascorso relativo alle statistiche.<br>
+Viene resettato a 0 quando viene modificato l'adattatore NET (16).</p>
+<p>16) Nome della connessione e nome dell'adattore di rete.</p>
+<p>17) Statistiche dei dati di download e di upload.<br>
+Vengono resettate a 0 quando viene modificato l'adattatore NET (16).</p>
+<p>&nbsp;</p>
+<h3>* &Egrave possibile impostare una valore illimitato in Windows Server
+2003, Windows 2008 e Windows 7. Di conseguenza, il valore del limite
+verr&agrave disabilitato.</h3>
+</td>
+</tr>
+
+
+</table>
+
+
+<h2>&nbsp;</h2>
+<h2>Scheda "Statistiche"</h2>
+<table border="0" width="100%" id="table2">
+	<tr>
+		<td>
+		<img border="0" src="images/tcp-z_statistics.gif" width="390"
+height="457"></td>
+		<td width="7" align="left" valign="top">&nbsp;</td>
+		<td width="575" align="left" valign="top"><p>1) Resetta il contatore a 0 e
+avvia le nuove statistiche.</p><p>2) Numero complessivo dei dati di upload
+trasmessi su questa connessione o su questo adattatore.<br>
+		Le statistiche vengono avviate all'avvio del computer.</p>
+		<p>3)&nbsp; Numero complessivo dei dati di download trasmessi su questa
+connessione o su questo adattatore.<br>
+		Le statistiche vengono avviate all'avvio del computer.</p>
+		<p>&nbsp;</p>
+		<p>* Se stai utilizzando Bit Torrent o E-mule, e il valore dei tentativi
+di connessione in entrata &egrave 0, significa che la porta in ascolto
+&egrave bloccata da un firewall, oppure che stai usando una LAN senza
+mapping o forward della porta.</p></td>
+	</tr>
+</table>
+<h2>&nbsp;</h2>
+<h2>Scheda "Dettagli"</h2>
+<table border="0" width="100%" id="table3">
+	<tr>
+		<td>
+		<img border="0" src="images/tcp-z_detail.gif" width="390"
+height="457"></td>
+		<td width="7" align="left" valign="top">&nbsp;</td>
+		<td width="575" align="left" valign="top"><p>1) Riga di comando del
+processo.</p><p>2) Data e ora di creazione del processo.</p>
+		<p>3) Memoria fisica usata dal processo.</p>
+		<p>4) Memoria virtuale usata dal processo.</p>
+		<p>5) Byte I/O letti.<br>
+		In Gestione attivit&agrave &egrave il numero dei byte letti nelle
+operazioni di input e output generate da un processo, inclusi i file, la
+rete e i dispositivi I/O. Gli handle dei byte I/O letti diretti alla CONSOLE
+(console input object) non vengono contati.</p>
+		<p>6) Byte I/O scritti.<br>
+		In Gestione attivit&agrave &egrave il numero dei byte scritti nelle
+operazioni di input e output generate da un processo, inclusi i file, la
+rete e i dispositivi I/O. I/O
+		Gli handle dei byte I/O scritti diretti alla CONSOLE (console input
+object) non vengono contati.</p>
+		</td>
+	</tr>
+</table>
+<p>&nbsp;</p>
+
+<h2>&nbsp;Scheda "Applica patch"</h2>
+<table border="0" width="100%" id="table4">
+	<tr>
+		<td>
+		<img border="0" src="images/tcp-z_patch.gif" width="390"
+height="457"></td>
+		<td width="7" align="left" valign="top">&nbsp;</td>
+		<td width="575" align="left" valign="top"><p>1) Modifica il valore
+limitato nella memoria del kernel.<br>
+		<br>
+		Anche dopo aver chiuso TCP-Z, i valori rimarranno nella memoria del
+kernel, fino al riavvio del computer.<br>
+		Questa &egrave una modifica temporanea. Dopo aver riavviato il computer,
+verranno ripristinati tutti i valori iniziali.<br>
+		Di conseguenza, sar&agrave necessario modificare il valore limitato ad
+ogni avvio.</p>
+		<p>2) Clicca su questo pulsante per applicare il nuovo valore.</p>
+		<p>&Egrave possibile usare anche la riga di comando per modificare il
+valore limitato:<br>
+		tcpz.exe&nbsp; -limit:200<br>
+		tcpz.exe&nbsp; -limit:200&nbsp; -autoexit</p>
+		<p>3) Modifica direttamente il valore limitato nel file file
+tcpip.sys.</p>
+		<p>Questa funzione &egrave disponibile solo in Windows XP.<br>
+		Per applicare la patch al file tcpip.sys in Vista, prova lo strumento
+&quot;Universal Tcpip.sys
+		Patch&quot;.</p>
+		<p>&nbsp;</p>
+		<p>* Il file tcpip.sys di Windows XP ha a disposizione 4 byte, quindi il
+limite massimo raggiungibile &egrave 0xFFFFFFFF. <br>
+		<br>
+		* Il file tcpip.sys di Vista e Windows 7 ha a disposizione solo 1 byte,
+quindi il limite massimo raggiungibile &egrave 0xFF (255).<br>
+&nbsp;</p>
+		</td>
+	</tr>
+</table>
+
+
+<p>&nbsp;</p>
+<h2>Tasti di scelta rapida</h2>
+<table border="0" width="448" id="table5" cellspacing="5">
+	<tr>
+		<td width="259">
+		<p>Passa alla scheda successiva</p></td>
+		<td><p>Ctrl + Tab</p></td>
+	</tr>
+	<tr>
+		<td width="259"><p>Passa al controllo successivo</p></td>
+		<td><p>Tab</p></td>
+	</tr>
+	<tr>
+		<td width="259"><p>Conferma</p></td>
+		<td><p>Spazio</p></td>
+	</tr>
+	<tr>
+		<td width="259"><p>Cattura e salva la finestra di TCP-Z</p></td>
+		<td><p>F5</p></td>
+	</tr>
+	<tr>
+		<td width="259"><p>Cattura e salva lo schermo intero</p></td>
+		<td><p>F6</p></td>
+	</tr>
+	</table>
+
+
+<p>&nbsp;</p>
+<h2>Riga di comando</h2>
+<p>tcpz.exe&nbsp; -limit:200<br>
+		tcpz.exe&nbsp; -limit:200&nbsp; -autoexit<br>
+tcpz.exe&nbsp; -minimize<br>
+<br>
+Se un antivirus blocca il caricamento del driver di TCP-Z e non consente
+l'avvio di TCP-Z, &egrave possibile tentare di avviare TCP-Z senza il
+supporto del driver:<br>
+tcpz.exe&nbsp; -nodriver</p>
+<p>Comunque, senza il supporto del driver, non sar&agrave disponbile la
+funzione di applicazione della patch alla memoria.</p>
+<p>&nbsp;</p>
+
+
+<p>&nbsp;</p>
+<h2>Setting in tcpz.ini</h2>
+<table border="0" width="504" id="table5" cellspacing="5">
+	<tr>
+		<td width="214">
+		<p>MaxSpeedGraph=200</p></td>
+		<td><p>Upper value in graph.</p></td>
+	</tr>
+	<tr>
+		<td width="214"><p>NotAdjustSpeedGraph=0</p></td>
+		<td><p>0 - Auto increase the upper of range in graph.<br>
+		1 - Fixed upper of range in graph.</p></td>
+	</tr>
+
+	</table>
+
+</body>
+</html>

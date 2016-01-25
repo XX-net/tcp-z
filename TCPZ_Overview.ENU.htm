@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<title>TCP-Z Overview</title>
+<meta http-equiv="Content-Type" content=
+"text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+p {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+.bottommenu {  font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-style: normal; text-decoration: none}
+h3 {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-style: normal; font-weight: bold}
+h1 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 18pt; font-weight: bold; margin-top: 16px}
+li {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+h2 {  font-family: Arial, Helvetica, sans-serif; font-size: 14pt; font-weight: bold}
+ol {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+blockquote {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+pre {  font-family: "Courier New", Courier, mono; font-size: 9pt}
+ul {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+.almost_half_cell{max-width:400;width:49%}-->
+</style>
+</head>
+<body bgcolor="#FFFFFF">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="379">
+
+<tr>
+<td width="23%" height="52">&nbsp;</td>
+<td align="right" valign="bottom" width="77%" height="52"><b>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="5">Overview</font></b></td>
+</tr>
+
+<tr>
+
+<td colspan="2" valign="top" height="2" bgcolor="#99CC00"></td>
+</tr>
+
+
+<tr>
+
+<td colspan="2" valign="top" align="left">
+<h1 >TCP-Z&nbsp; V2.6</h1>
+
+<h2>TCP Window</h2>
+<table border="0" width="100%" id="table1">
+	<tr>
+		<td><img border="0" src="images/tcp-z_tcp.gif" width="390" height="457"></td>
+		<td width="7" align="left" valign="top">&nbsp;</td>
+		<td width="575" align="left" valign="top"><p>1) File   version.</p>
+		<p>2) TCP/IP half-open connection limit value, read from the file 
+		tcpip.sys in hard disk.</p>
+		<p>3) TCP/IP half-open connection limit value, read from the kernel memory.</p>
+		<p>4) Indicating the tcpip.sys whether or not a original file. <br>
+		&quot;Yes&quot;, meaning that the file has not been modified.</p>
+		<p>5) Count of system event, which ID equal to 4226.</p>
+		<p>6) Record of peak. Left-click the icon, it will display the highest 
+		values and the time of that event.</p>
+		<p>7) Change the align of real time counter label.</p>
+		<p>8) Number of established connections.</p>
+		<p>9) Number of half-open connections. <br>
+		Half-open connection, it&#39;s incomplete outgoing/outbound TCP connection, in SYN-SENT 
+		state.</p>
+		<p>10) Create depth, create rate depth. This value is read from kernel 
+		memory of tcpip.sys.<br>
+		In fact, Windows control this value not exceeds the memory limit(3).<br>
+		TCP half-open connection limitation is popular statement.</p>
+		<p>11) Number of incoming/inbound TCP connections, in SYN-RCVD state.<br>
+		A program open a port to listening. When a remote client trying to 
+		connect to this port, will result in this case.</p></td>
+	</tr>
+</table>
+
+<p>12) Real time number, peak number. xx/yy, xx is real time value, yy is peak/higest 
+value.<br>
+Connection graph and speed graph has the same format.</p>
+<p>13) Download speed, in Kilobytes/second.</p>
+<p>14) Upload speed, in&nbsp; Kilobytes/second.</p>
+<p>15) Elapsed time of statistics.<br>
+It will be reset to 0 when you change the net adapter in (16).</p>
+<p>16) Connection name and the network adapter name.</p>
+<p>17) Statistics of download data and upload data.<br>
+It will be reset to 0 when you change the net adapter in (16).</p>
+<p>&nbsp;</p>
+<h3>* Windows Server 2003 / 2008 / 7 is unlimited. so that Limit value will 
+grayed out.</h3>
+</td>
+</tr>
+
+
+</table>
+
+
+<h2>&nbsp;</h2>
+<h2>Statistics Window</h2>
+<table border="0" width="100%" id="table2">
+	<tr>
+		<td>
+		<img border="0" src="images/tcp-z_statistics.gif" width="390" height="457"></td>
+		<td width="7" align="left" valign="top">&nbsp;</td>
+		<td width="575" align="left" valign="top"><p>1) Reset the counter to 0, 
+		and start a new statistics.</p><p>2) Total number of upload data in this 
+		connection/adapter.<br>
+		Statistics since the system boot up.</p>
+		<p>3)&nbsp; Total number of download data in this connection/adapter.<br>
+		Statistics since the system boot up.</p>
+		<p>&nbsp;</p>
+		<p>* If your are using BT/e-mule, and the incoming connection attempts 
+		is 0. It means the listening port has been blocked by firewall, or your 
+		are in the LAN without port mapping/forward.</p>
+		<p>You will missed more remote clients, resulting in lower download 
+		speeds.</p></td>
+	</tr>
+</table>
+<h2>&nbsp;</h2>
+<h2>Detail Window</h2>
+<table border="0" width="100%" id="table3">
+	<tr>
+		<td>
+		<img border="0" src="images/tcp-z_detail.gif" width="390" height="457"></td>
+		<td width="7" align="left" valign="top">&nbsp;</td>
+		<td width="575" align="left" valign="top"><p>1) Command line of the 
+		process.</p><p>2) Creation time of the process.</p>
+		<p>3) Physical memory usage of the process, the current working set of 
+		the process.</p>
+		<p>4) Virtual memory usage of the process.</p>
+		<p>5) I/O Read bytes.<br>
+		In Task Manager, the number of bytes read in input/output operations 
+		generated by a process, including file, network, and device I/Os. I/O 
+		Read Bytes directed to CONSOLE (console input object) handles are not 
+		counted.</p>
+		<p>6) I/O Write bytes.<br>
+		In Task Manager, the number of bytes written in input/output operations 
+		generated by a process, including file, network, and device I/Os. I/O 
+		Write Bytes directed to CONSOLE (console input object) handles are not 
+		counted.</p>
+		</td>
+	</tr>
+</table>
+<p>&nbsp;</p>
+
+<h2>&nbsp;Patch Window</h2>
+<table border="0" width="100%" id="table4">
+	<tr>
+		<td>
+		<img border="0" src="images/tcp-z_patch.gif" width="390" height="457"></td>
+		<td width="7" align="left" valign="top">&nbsp;</td>
+		<td width="575" align="left" valign="top"><p>1) Modify limit value in 
+		kernel memory.<br>
+		<br>
+		Although you exit the TCP-Z, the modified values will remain in the 
+		kernel memory.<br>
+		The modified values will remain in effect, until shutdown computer.<br>
+		<br>
+		This is a temporary modification, restart the system will revert to the 
+		initial value.<br>
+		You need to modify the limit value in each boot.</p>
+		<p>2) Press this button to apply new limit value.</p>
+		<p>You can using command line to modify the limit value:<br>
+		tcpz.exe&nbsp; -limit:200<br>
+		tcpz.exe&nbsp; -limit:200&nbsp; -autoexit</p>
+		<p>3) Direct modify the limit value in file tcpip.sys.</p>
+		<p>This function only enabled in the Windows XP.<br>
+		If you want to patch Vista, please try another tool &quot;Universal Tcpip.sys 
+		Patch&quot;.</p>
+		<p>&nbsp;</p>
+		<p>* Tcpip.sys of Windows XP have 4 bytes for comparing, the limit can 
+		be achieved 0xFFFFFFFF. <br>
+		<br>
+		* Tcpip.sys of Vista/Windows 7, there are only 1 byte, so the upper 
+		limit is 0xFF (255).<br>
+&nbsp;</p>
+		</td>
+	</tr>
+</table>
+
+
+<p>&nbsp;</p>
+<h2>Keyboard Control</h2>
+<table border="0" width="448" id="table5" cellspacing="5">
+	<tr>
+		<td width="259">
+		<p>Switch Tab</p></td>
+		<td><p>Ctrl + Tab</p></td>
+	</tr>
+	<tr>
+		<td width="259"><p>Switch Control</p></td>
+		<td><p>Tab</p></td>
+	</tr>
+	<tr>
+		<td width="259"><p>Confirm</p></td>
+		<td><p>Space</p></td>
+	</tr>
+	<tr>
+		<td width="259"><p>Capture TCP-Z Window to image file</p></td>
+		<td><p>F5</p></td>
+	</tr>
+	<tr>
+		<td width="259"><p>Capture full screen to image file</p></td>
+		<td><p>F6</p></td>
+	</tr>
+	</table>
+
+
+<p>&nbsp;</p>
+<h2>Command Line</h2>
+<p>tcpz.exe&nbsp; -limit:200<br>
+		tcpz.exe&nbsp; -limit:200&nbsp; -autoexit<br>
+tcpz.exe&nbsp; -minimize<br>
+<br>
+If antivirus software block tcp-z loading driver and cause tcp-z fail to 
+startup, you can bypass driver in command line:<br>
+tcpz.exe&nbsp; -nodriver</p>
+<p>But, without driver support, it will lost the memory patch feature.</p>
+<p>&nbsp;</p>
+
+
+<p>&nbsp;</p>
+<h2>Setting in tcpz.ini</h2>
+<table border="0" width="504" id="table5" cellspacing="5">
+	<tr>
+		<td width="214">
+		<p>MaxSpeedGraph=200</p></td>
+		<td><p>Upper value in graph.</p></td>
+	</tr>
+	<tr>
+		<td width="214"><p>NotAdjustSpeedGraph=0</p></td>
+		<td><p>0 - Auto increase the upper of range in graph.<br>
+		1 - Fixed upper of range in graph.</p></td>
+	</tr>
+
+	</table>
+
+
+</body>
+</html>

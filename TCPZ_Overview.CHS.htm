@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<title>TCP-Z Overview</title>
+<meta http-equiv="Content-Type" content=
+"text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+p {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+.bottommenu {  font-family: Arial, Helvetica, sans-serif; font-size: 8pt; font-style: normal; text-decoration: none}
+h3 {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt; font-style: normal; font-weight: bold}
+h1 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 18pt; font-weight: bold; margin-top: 16px}
+li {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+h2 {  font-family: Arial, Helvetica, sans-serif; font-size: 14pt; font-weight: bold}
+ol {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+blockquote {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+pre {  font-family: "Courier New", Courier, mono; font-size: 9pt}
+ul {  font-family: Arial, Helvetica, sans-serif; font-size: 10pt}
+.almost_half_cell{max-width:400;width:49%}-->
+</style>
+</head>
+<body bgcolor="#FFFFFF">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="379">
+
+<tr>
+<td width="23%" height="52">&nbsp;</td>
+<td align="right" valign="bottom" width="77%" height="52"><b>
+<font face="Verdana, Arial, Helvetica, sans-serif" size="5">Overview</font></b></td>
+</tr>
+
+<tr>
+
+<td colspan="2" valign="top" height="2" bgcolor="#99CC00"></td>
+</tr>
+
+
+<tr>
+
+<td colspan="2" valign="top" align="left">
+<h1 >TCP-Z&nbsp; V2.6</h1>
+
+<h2>TCP Window</h2>
+<table border="0" width="100%" id="table1">
+	<tr>
+		<td><img border="0" src="images/tcp-z_tcp.gif" width="390" height="457"></td>
+		<td width="7" align="left" valign="top">&nbsp;</td>
+		<td width="575" align="left" valign="top"><p>1) Tcpip.sys文件版本。</p>
+		<p>2) TCP/IP 半开连接数限制数值。从硬盘中的文件 tcpip.sys读取。</p>
+		<p>3) TCP/IP 半开连接数限制数值。读取自系统核心内存。</p>
+		<p>4) 指示当前系统的tcpip.sys文件是否是原版文件。<br>
+		显示为“是”，表示当前文件没有经过任何修改。</p>
+		<p>5) ID为4226的系统事件统计数量。</p>
+		<p>6) 峰值记录。左击该图标，将显示历史记录的峰值，及其发生的时间日期。</p>
+		<p>7) 更改实时数值标签的对齐方式。</p>
+		<p>8) 已建立的TCP连接数。</p>
+		<p>9) TCP半开连接数。 <br>
+		半开连接数，是指向正在对外发起的、尚未完成/未收到远程计算机回应的TCP连接。状态标志是SYN-SENT。</p>
+		<p>10) 新建队列，新建连接速度。 此值读取自tcpip.sys的核心内存。<br>
+		事实上，Windows是比较这个数值与3内存限制数。</p>
+		<p>11) 被动的连接。本机已经收到远程的请求，建立连接中。状态标志是SYN-RCVD。<br>
+		如果一个程序在本机打开一个端口进入监听状态，远程计算机尝试连接此端口时，将产生这个以上的情景。</p></td>
+	</tr>
+</table>
+
+<p>12) 实时数值/历史峰值。 xx/yy, xx 实时数值，yy是峰值。<br>
+连接数图表与速度图表的格式是一致的。</p>
+<p>13) 下载速度。千字节/秒。</p>
+<p>14) 上传速度。千字节/秒。</p>
+<p>15) 网卡数据流量的统计时间。<br>
+更改网卡(16)时，此数值将重置为0。</p>
+<p>16) 网络连接名称及其对应的网卡名称。</p>
+<p>17) 网卡数据流量的统计，D－下载；U － 上传。<br>
+更改网卡(16)时，此数值将重置为0。</p>
+<p>&nbsp;</p>
+<h3>* Windows Server 2003 / 2008 / 7 没有限制，所以图上的限制数值以灰色显示。</h3>
+</td>
+</tr>
+
+
+</table>
+
+
+<h2>&nbsp;</h2>
+<h2>统计</h2>
+<table border="0" width="100%" id="table2">
+	<tr>
+		<td>
+		<img border="0" src="images/tcp-z_statistics.gif" width="390" height="457"></td>
+		<td width="7" align="left" valign="top">&nbsp;</td>
+		<td width="575" align="left" valign="top"><p>1) 重置为0，重新开始统计。</p><p>2) 
+		网卡所发送的数据总流量。<br>
+		统计周期：自开机后开始。</p>
+		<p>3)&nbsp; 网卡所接收的数据总流量。<br>
+		统计周期：自开机后开始。</p>
+		<p>&nbsp;</p>
+		<p>* 如果你正在使用BT/e-mule, 而传入的连接数续读一直为0，那么表示当前的监听端口已经被防火墙拦截；或者你处于内网，而没有正常的影射TCP端口或启用UPNP。</p>
+		<p>在这种情况下，你会错失很多与远程客户端连接的机会，从而降低下载速度。</p></td>
+	</tr>
+</table>
+<h2>&nbsp;</h2>
+<h2>详情</h2>
+<table border="0" width="100%" id="table3">
+	<tr>
+		<td>
+		<img border="0" src="images/tcp-z_detail.gif" width="390" height="457"></td>
+		<td width="7" align="left" valign="top">&nbsp;</td>
+		<td width="575" align="left" valign="top"><p>1) 进程启动所用的命令行。</p><p>2) 
+		进程启动的日期时间。</p>
+		<p>3) 物理内存使用量，当前进程的工作集大小。</p>
+		<p>4) 虚拟内存大小。</p>
+		<p>5) I/O 读取数据量。<br>
+		该进程所产生的I/O读取操作数据总量，包括文件、网络、设备I/O等。</p>
+		<p>6) I/O 写入数据总量.<br>
+		该进程所产生的I/O写入操作数据总量，包括文件、网络、设备I/O等。</p>
+		</td>
+	</tr>
+</table>
+<p>&nbsp;</p>
+
+<h2>补丁</h2>
+<table border="0" width="100%" id="table4">
+	<tr>
+		<td>
+		<img border="0" src="images/tcp-z_patch.gif" width="390" height="457"></td>
+		<td width="7" align="left" valign="top">&nbsp;</td>
+		<td width="575" align="left" valign="top"><p>1) 修改半开连接数限制值，直接修改核心内存方式。<br>
+		<br>
+		即使退出TCP-Z，内存中的修改值仍然会保持不变。此修改值在系统关机前一直生效。<br>
+		系统休眠时，此值保持不变。<br>
+		<br>
+		重新开机后，需要再次修改限制数。你可以通过安装驱动，或用命令行启动TCP-Z实现自动修改。</p>
+		<p>tcpz.exe&nbsp; -limit:200<br>
+		tcpz.exe&nbsp; -limit:200&nbsp; -autoexit</p>
+		<p>2) 按下此按钮，程序将修改系统限制为你所设定的新限制数。</p>
+		<p>3) 修改半开连接数限制值，修改文件方式。</p>
+		<p>TCP-Z的这个功能仅在Windows 
+		XP下允许。如果你想以修改文件方式破解Vista，请使用另一工具“通用Tcpip.sys文件补丁—— &quot;Universal Tcpip.sys 
+		Patch&quot;。</p>
+		<p>&nbsp;</p>
+		<p>* Windows XP 的Tcpip.sys 文件有4个字节比较，所以最大上限可以达到0xFFFFFFFF.。<br>
+		<br>
+		* Vista/Windows 7的Tcpip.sys文件只有一个字节比较位，所以最大上限为0xFF (255)。<br>
+&nbsp;</p>
+		</td>
+	</tr>
+</table>
+
+
+<p>&nbsp;</p>
+<h2>键盘快捷键</h2>
+<table border="0" width="448" id="table5" cellspacing="5">
+	<tr>
+		<td width="259">
+		<p>切换窗口页</p></td>
+		<td><p>Ctrl + Tab</p></td>
+	</tr>
+	<tr>
+		<td width="259"><p>切换控件</p></td>
+		<td><p>Tab</p></td>
+	</tr>
+	<tr>
+		<td width="259"><p>确认</p></td>
+		<td><p>Space</p></td>
+	</tr>
+	<tr>
+		<td width="259"><p>截取TCP-Z窗口为图片文件</p></td>
+		<td><p>F5</p></td>
+	</tr>
+	<tr>
+		<td width="259"><p>截取全屏窗口为图片文件</p></td>
+		<td><p>F6</p></td>
+	</tr>
+	</table>
+
+
+<p>&nbsp;</p>
+<h2>命令行</h2>
+<table border="0" width="578" id="table6" cellspacing="5">
+	<tr>
+		<td width="259"><p>
+		tcpz.exe&nbsp; -limit:200</p></td>
+		<td><p>修改新限制数至200。</p></td>
+	</tr>
+	<tr>
+		<td width="259"><p>tcpz.exe&nbsp; -limit:200&nbsp; -autoexit</p></td>
+		<td><p>修改新限制数至200，修改完成自动退出程序。</p></td>
+	</tr>
+	<tr>
+		<td width="259"><p>tcpz.exe&nbsp; -minimize</p></td>
+		<td><p>运行时窗口最小化。</p></td>
+	</tr>
+	</table>
+
+
+<p>
+<br>
+如果因杀毒软件拦截而造成TCP－Z无法正常启动，你可以通过命令行方式强制不加载驱动，从而使TCP－Z能正常打开窗口。<br>
+tcpz.exe&nbsp; -nodriver</p>
+<p>但不加载驱动程序的时候，你将无法使用内存补丁方式破解。</p>
+
+
+<p>&nbsp;</p>
+<h2>设置 tcpz.ini</h2>
+<table border="0" width="504" id="table5" cellspacing="5">
+	<tr>
+		<td width="214">
+		<p>MaxSpeedGraph=200</p></td>
+		<td><p>图表中速度显示 Y 轴最大值。</p></td>
+	</tr>
+	<tr>
+		<td width="214"><p>NotAdjustSpeedGraph=0</p></td>
+		<td><p>0 - 自动增加 Y 轴上限。<br>
+		1 - 固定上限数值。</p></td>
+	</tr>
+
+	</table>
+</body>
+</html>
